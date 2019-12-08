@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap');
+
+// Variables
+@import 'variables';
+@import "customize-bootstrap";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+//Custom CSS
+@import "components/app/app-header";
+@import "components/app/app-sidebar";
+
+.app-content{
+    min-height: calc(100vh - 3rem);
+    margin-top: 3rem;
+    background-color: #ffffff;
+    margin-left: $sidebar-width;
+    transition: margin-left 0.3s ease;
+
+    @media (max-width: 767px) {
+        margin-left: 0;
+    }
+}
